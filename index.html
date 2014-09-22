@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Login JS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/lib/zepto.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/facebook.js"></script>
+    </head>
+<body>
+    <div id="fb_login" style="display: none;">
+        <!--
+            Below we include the Login Button social plugin. This button uses
+            the JavaScript SDK to present a graphical Login button that triggers
+            the FB.login() function when clicked.
+        -->
+        <fb:login-button scope="public_profile,email" onlogin="facebook.checkLoginState();">
+        </fb:login-button>
+    </div>
+    <div id="fb_logout" style="display: none;">
+        <!--
+            The Logout Button triggers
+            the FB.logout() function when clicked.
+            Note: This function call will also log the person out of Facebook
+        -->
+        <a href="#" onclick="facebook.logout();">Logout</a>
+    </div>
+
+    <div id="status">
+    </div>
+</body>
+</html>
